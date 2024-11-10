@@ -7,11 +7,14 @@ import {
   useColorScheme,
 } from 'react-native';
 
+import Colors from '@/utils/colors';
+
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode ? '#000' : '#fff',
+    backgroundColor: Colors.bg500,
+    flex: 1,
   };
 
   return (
@@ -22,8 +25,8 @@ const App = () => {
       />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Text style={{fontSize: 48, fontWeight: '100'}}>
+        contentContainerStyle={backgroundStyle}>
+        <Text style={{fontSize: 48, fontWeight: '400'}}>
           Whereas disregard and contempt for human rights have resulted
         </Text>
       </ScrollView>
